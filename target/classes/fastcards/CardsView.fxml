@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="fastcards.CardsController">
+  <top>
+    <HBox alignment="CENTER">
+      <Label text="Cards" styleClass="title"/>
+    </HBox>
+  </top>
+  <center>
+    <VBox spacing="10" alignment="CENTER">
+      <ListView fx:id="cardsList" prefWidth="320" prefHeight="460"/>
+      <HBox spacing="8" alignment="CENTER">
+        <TextField fx:id="qField" promptText="Question" prefWidth="150"/>
+        <TextField fx:id="aField" promptText="Answer" prefWidth="150"/>
+        <Button text="Add" onAction="#onAdd"/>
+      </HBox>
+      <HBox spacing="8" alignment="CENTER">
+        <Button text="Import CSV" onAction="#onImportCsv"/>
+        <Button text="Export CSV" onAction="#onExportCsv"/>
+        <Button text="Delete Selected" onAction="#onDelete"/>
+      </HBox>
+    </VBox>
+  </center>
+  <bottom>
+    <HBox alignment="CENTER">
+      <Button text="Back" onAction="#onBack"/>
+    </HBox>
+  </bottom>
+</BorderPane>

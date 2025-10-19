@@ -1,0 +1,6 @@
+:root { }
+.root { -fx-font-size: 15px; }
+.title { -fx-font-size: 22px; -fx-font-weight: bold; }
+.btn-primary { -fx-font-weight: bold; }
+.card { -fx-padding: 12; -fx-background-color: #f6f6f8; -fx-background-radius: 12; }
+.spacer { -fx-min-height: 12; }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="fastcards.LoginController">
+  <center>
+    <VBox spacing="12.0" alignment="CENTER">
+      <Label text="FastCards" styleClass="title"/>
+      <TextField fx:id="emailField" promptText="Email" maxWidth="260"/>
+      <PasswordField fx:id="passwordField" promptText="Password" maxWidth="260"/>
+      <Button text="Login" onAction="#onLogin" maxWidth="260" styleClass="btn-primary"/>
+      <Hyperlink text="Register" onAction="#onRegister"/>
+    </VBox>
+  </center>
+  <padding><Insets topRightBottomLeft="24"/></padding>
+</BorderPane>

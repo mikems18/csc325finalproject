@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="fastcards.QuizController">
+  <top>
+    <HBox alignment="CENTER">
+      <Label fx:id="positionLabel" text="1 / 10" styleClass="title"/>
+    </HBox>
+  </top>
+  <center>
+    <VBox spacing="12" alignment="CENTER">
+      <Label fx:id="questionLabel" wrapText="true" prefWidth="320"/>
+      <ListView fx:id="choicesList" prefWidth="320" prefHeight="300"/>
+    </VBox>
+  </center>
+  <bottom>
+    <HBox alignment="CENTER">
+      <Button text="Next" onAction="#onNext" styleClass="btn-primary"/>
+      <Region HBox.hgrow="ALWAYS"/>
+      <Button text="Back" onAction="#onBack"/>
+    </HBox>
+  </bottom>
+</BorderPane>
