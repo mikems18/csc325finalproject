@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="900.0" prefWidth="1400.0"
+            stylesheets="@app.css"
+            fx:controller="fastcards.LoginController"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- CENTER: frosted login card -->
+    <center>
+        <StackPane>
+            <children>
+
+                <BorderPane maxWidth="900.0" maxHeight="600.0"
+                            styleClass="frosted-container">
+                    <padding>
+                        <Insets top="40" right="40" bottom="40" left="40"/>
+                    </padding>
+
+                    <!-- LEFT: logo + intro text -->
+                    <left>
+                        <VBox spacing="20" alignment="CENTER_LEFT">
+                            <padding>
+                                <Insets right="40"/>
+                            </padding>
+                            <children>
+                                <ImageView fitHeight="160.0" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/logo.png"/>
+                                    </image>
+                                </ImageView>
+
+                                <Label text="Welcome back!"
+                                       style="-fx-text-fill: #1d5fbf; -fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+                                <Label text="Sign in to continue studying your decks."
+                                       wrapText="true"
+                                       maxWidth="260.0"
+                                       style="-fx-text-fill: #555; -fx-font-size: 14px;"/>
+                            </children>
+                        </VBox>
+                    </left>
+
+                    <!-- RIGHT: login form -->
+                    <center>
+                        <VBox spacing="18" alignment="CENTER">
+                            <children>
+
+                                <Label text="Sign In"
+                                       style="-fx-text-fill: #1d5fbf; -fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+                                <!-- Email field -->
+                                <VBox spacing="6" maxWidth="320.0">
+                                    <children>
+                                        <Label text="Email"
+                                               style="-fx-text-fill: #555; -fx-font-size: 13px;"/>
+                                        <TextField fx:id="emailField"
+                                                   promptText="you@example.com"
+                                                   styleClass="login-field"/>
+                                    </children>
+                                </VBox>
+
+                                <!-- Password field -->
+                                <VBox spacing="6" maxWidth="320.0">
+                                    <children>
+                                        <Label text="Password"
+                                               style="-fx-text-fill: #555; -fx-font-size: 13px;"/>
+                                        <PasswordField fx:id="passwordField"
+                                                       promptText="••••••••"
+                                                       styleClass="login-field"/>
+                                    </children>
+                                </VBox>
+
+                                <!-- Error message -->
+                                <Label fx:id="errorLabel"
+                                       textFill="red"
+                                       style="-fx-font-size: 13px;"/>
+
+                                <!-- Buttons -->
+                                <HBox spacing="10" alignment="CENTER">
+                                    <children>
+                                        <Button text="Sign In"
+                                                onAction="#onLogin"
+                                                styleClass="button-primary"/>
+                                    </children>
+                                </HBox>
+
+                                <!-- Register link -->
+                                <Label text="New here? Create an account"
+                                       onMouseClicked="#onRegister"
+                                       style="-fx-text-fill: #007BFF; -fx-underline: true; -fx-cursor: hand;"/>
+                                <Button text="Sign in with Google"
+                                        onAction="#onGoogleSignIn"
+                                        maxWidth="Infinity"
+                                        styleClass="button-primary"/>
+
+                            </children>
+                        </VBox>
+                    </center>
+
+                </BorderPane>
+
+            </children>
+        </StackPane>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="fastcards.StudyFlashController"
+      alignment="CENTER" spacing="10" >
+  <Label fx:id="deckTitleLabel" text="Deck Title" style="-fx-font-size: 20px;"/>
+  <Label fx:id="questionLabel" text="Question" wrapText="true" style="-fx-font-size: 16px;"/>
+  <Label fx:id="answerLabel" text="Answer" wrapText="true"/>
+  <HBox spacing="10" alignment="CENTER">
+    <Button fx:id="showAnswerButton" text="Show Answer" onAction="#onShowAnswer"/>
+  </HBox>
+  <HBox spacing="10" alignment="CENTER">
+    <Button fx:id="gotItButton" text="I got it right" onAction="#onGotIt"/>
+    <Button fx:id="didntGetItButton" text="I didn't get it" onAction="#onDidntGetIt"/>
+  </HBox>
+  <Button text="Back" onAction="#onBack"/>
+</VBox>

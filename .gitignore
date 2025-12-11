@@ -1,0 +1,82 @@
+###############################
+# Java / Maven Build Artifacts
+###############################
+target/
+out/
+build/
+*.class
+*.log
+
+###############################
+# IntelliJ IDEA
+###############################
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# IntelliJ workspace-specific files
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/libraries/
+.idea/modules.xml
+.idea/compiler.xml
+
+###############################
+# VS Code
+###############################
+.vscode/
+
+###############################
+# OS Files
+###############################
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+###############################
+# Firebase / Security Keys
+###############################
+# NEVER commit anything containing API keys or tokens
+FirebaseConfig.java
+serviceAccountKey.json
+google-services.json
+*.pem
+*.p12
+*.key
+*.secret
+*.token
+
+###############################
+# Credentials / Sessions
+###############################
+session.*
+*.env
+.env.*
+*.credentials
+*.keystore
+
+###############################
+# Logs & Dumps
+###############################
+logs/
+*.log
+*.trace
+*.hprof
+
+###############################
+# Project-specific temporary files
+###############################
+fastcards-debug/
+local-config/
+cache/

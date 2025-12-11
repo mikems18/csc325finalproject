@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="fastcards.CardsController"
+            prefWidth="1400.0" prefHeight="900.0"
+            stylesheets="@app.css">
+
+    <!-- Top: logo + deck title -->
+    <top>
+        <VBox alignment="CENTER">
+            <children>
+                <ImageView fitHeight="120.0" preserveRatio="true">
+                    <image>
+                        <!-- adjust path if your logo is in a different folder/name -->
+                        <Image url="@img/logo.png"/>
+                    </image>
+                </ImageView>
+
+                <Label fx:id="deckTitleLabel"
+                       text="Deck Name"
+                       style="-fx-font-size: 26px; -fx-text-fill: #1d5fbf; -fx-font-weight: bold;"/>
+            </children>
+            <padding>
+                <Insets top="40" right="40" bottom="20" left="40"/>
+            </padding>
+        </VBox>
+    </top>
+
+    <!-- Center: card list + edit form -->
+    <center>
+        <HBox alignment="CENTER" spacing="40">
+            <children>
+
+                <!-- Left: list of cards -->
+                <VBox spacing="10">
+                    <children>
+                        <Label text="Cards in this deck:"
+                               style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                        <ListView fx:id="cardListView"
+                                  prefWidth="450" prefHeight="500"/>
+                    </children>
+                </VBox>
+
+                <!-- Right: front/back fields + buttons -->
+                <VBox spacing="10">
+                    <children>
+                        <Label text="Front (Question)"
+                               style="-fx-font-size: 16px;"/>
+                        <TextField fx:id="frontField"
+                                   promptText="Enter front / question text"
+                                   prefWidth="500"/>
+
+                        <Label text="Back (Answer)"
+                               style="-fx-font-size: 16px;"/>
+                        <TextField fx:id="backField"
+                                   promptText="Enter back / answer text"
+                                   prefWidth="500"/>
+
+                        <HBox alignment="CENTER" spacing="12">
+                            <children>
+                                <Button text="Add Card"
+                                        onAction="#onAddCard"
+                                        styleClass="button-primary"/>
+                                <Button text="Update Card"
+                                        onAction="#onUpdateCard"
+                                        styleClass="button-primary"/>
+                                <Button text="Delete Card"
+                                        onAction="#onDeleteCard"
+                                        styleClass="button-primary"/>
+                                <Button text="Import CSV"
+                                        onAction="#onImportCsv"
+                                        styleClass="button-primary"/>
+
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+
+            </children>
+            <padding>
+                <Insets top="20" right="40" bottom="20" left="40"/>
+            </padding>
+        </HBox>
+    </center>
+
+    <!-- Bottom: back / home navigation -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="20">
+            <children>
+                <Button text="Back to Home"
+                        onAction="#onBackToHome"
+                        styleClass="button-primary"/>
+            </children>
+            <padding>
+                <Insets top="10" right="10" bottom="30" left="10"/>
+            </padding>
+        </HBox>
+    </bottom>
+
+</BorderPane>

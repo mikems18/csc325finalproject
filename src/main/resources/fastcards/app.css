@@ -1,0 +1,284 @@
+/* =========================
+   GLOBAL ROOT / BACKGROUND
+   ========================= */
+
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-image: url("img/background.png");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+/* Optional layout helpers */
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom, #f7fbff, #e3edf9);
+}
+
+.app-header {
+    -fx-padding: 20 0 10 0;
+}
+
+.main-pane {
+    -fx-padding: 10 40 20 40;
+}
+
+/* =========================
+   LOGIN INPUTS
+   ========================= */
+
+.login-field {
+    -fx-pref-height: 46;
+    -fx-font-size: 16px;
+
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+
+    -fx-border-color: #1d5fbf;
+    -fx-border-width: 1;
+
+    -fx-padding: 0 12 0 12;
+}
+
+.login-field:focused {
+    -fx-border-color: #0b4aad;
+    -fx-border-width: 2;
+}
+
+/* =========================
+   ICON / IMAGE BUTTONS
+   ========================= */
+
+.image-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+}
+
+/* =========================
+   FROSTED GLASS CONTAINER
+   ========================= */
+
+.frosted-container {
+    -fx-background-color: rgba(255, 255, 255, 0.40);
+    -fx-background-radius: 20;
+    -fx-padding: 25;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.20), 20, 0.2, 0, 4);
+}
+
+/* =========================
+   HOME DECK LIST
+   ========================= */
+
+.deck-list {
+    -fx-background-insets: 0;
+    -fx-control-inner-background: transparent;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.deck-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 6 0;
+}
+
+/* Pill container inside each list cell (set as graphic in HomeController) */
+.deck-pill {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-background-radius: 30;
+    -fx-padding: 12 22;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 8, 0, 0, 2);
+}
+
+/* Title text */
+.deck-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1d5fbf;
+}
+
+/* Description text */
+.deck-desc {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6c757d;
+}
+
+/* Hover: same visual as selected for smooth feel */
+.deck-list .list-cell:hover .deck-pill {
+    -fx-background-color: #007BFF;
+}
+
+.deck-list .list-cell:hover .deck-title,
+.deck-list .list-cell:hover .deck-desc {
+    -fx-text-fill: white;
+}
+
+/* Selected state — slightly stronger highlight */
+.deck-list .list-cell:selected .deck-pill {
+    -fx-background-color: #007BFF;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.30), 10, 0.3, 0, 3);
+}
+
+.deck-list .list-cell:selected .deck-title,
+.deck-list .list-cell:selected .deck-desc {
+    -fx-text-fill: white;
+}
+
+/* =========================
+   PRIMARY BUTTONS
+   ========================= */
+
+.button-primary {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-text-fill: #007BFF;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 24 8 24;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 4, 0, 0, 1);
+    -fx-border-color: transparent;
+}
+
+.button-primary:hover {
+    -fx-background-color: #007BFF;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 8, 0, 0, 2);
+}
+
+.button-primary:pressed {
+    -fx-translate-y: 1;
+    -fx-effect: none;
+}
+
+/* Multiple-choice options: pill-like, align text nicely */
+.mc-option {
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* (Optional) success/error styles if you ever want them in code */
+.mc-option-correct {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+}
+
+.mc-option-wrong {
+    -fx-background-color: #dc3545;
+    -fx-text-fill: white;
+}
+
+/* =========================
+   FLASH CARD STYLING
+   ========================= */
+
+.flash-card {
+    -fx-min-width: 700;
+    -fx-max-width: 900;
+    -fx-min-height: 300;
+    -fx-alignment: center;
+    -fx-background-color: rgba(255,255,255,0.96);
+    -fx-background-radius: 28;
+    -fx-padding: 40;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 16, 0.2, 0, 4);
+}
+
+.flash-card-front-text {
+    -fx-font-size: 26px;
+    -fx-text-fill: #1d5fbf;
+    -fx-font-weight: bold;
+}
+
+.flash-card-back-text {
+    -fx-font-size: 24px;
+    -fx-text-fill: #333333;
+}
+
+
+.progress-pill {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-background-radius: 30;
+    -fx-padding: 10 22;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 10, 0.2, 0, 2);
+}
+
+/* The blue fill bar (we control width in the controller) */
+.progress-pill-fill {
+    -fx-background-color: #007BFF;
+    -fx-background-radius: 30;
+    -fx-pref-height: 22;   /* taller bar */
+    -fx-max-height: 22;
+    -fx-min-height: 22;
+    -fx-max-width: 260;    /* controller will set actual width 0..260 */
+}
+
+/* Text over the pill */
+.progress-pill-text {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1d5fbf;
+}
+
+/* Pill-style login fields to match the rest of the app */
+.login-field {
+    -fx-pref-height: 46;
+    -fx-font-size: 16px;
+    -fx-background-color: rgba(255,255,255,0.96);
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-color: #1d5fbf;
+    -fx-border-width: 1.5;
+    -fx-padding: 0 18 0 18;
+    -fx-text-inner-color: #333333;
+}
+
+.login-field:focused {
+    -fx-border-color: #007BFF;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.20), 10, 0.1, 0, 2);
+}
+
+/* Primary pill button – already similar, just ensure bold text */
+.button-primary {
+    -fx-background-color: white;
+    -fx-background-radius: 30;
+    -fx-text-fill: #007BFF;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 26 10 26;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+}
+
+.button-primary:hover {
+    -fx-background-color: #007BFF;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 8, 0, 0, 2);
+}
+
+/* Small secondary text buttons (e.g., Clear) */
+.button-secondary-small {
+    -fx-background-color: transparent;
+    -fx-text-fill: #4a5568;
+    -fx-font-size: 13px;
+    -fx-padding: 4 10 4 10;
+    -fx-cursor: hand;
+}
+
+.button-secondary-small:hover {
+    -fx-text-fill: #1d5fbf;
+}
+
+/* Subtle hyperlink style for "Create an account" */
+.link-subtle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #007BFF;
+    -fx-underline: true;
+}
+
+.link-subtle:hover {
+    -fx-text-fill: #0056b3;
+}
